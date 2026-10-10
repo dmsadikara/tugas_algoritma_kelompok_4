@@ -12,4 +12,53 @@ $barang = [
     ["kode" => "LKB-01", "nama" => "Lakban Bening"]
 ];
 
+// 2. Ambil pilihan algoritma dari form
+$metode = $_GET["metode"] ?? "";
+$hasil = $barang;
+
+// 3. Bubble Sort
+if ($metode == "bubble") {
+    $n = count($hasil);
+
+    for ($i = 0; $i < $n - 1; $i++) {
+        for ($j = 0; $j < $n - 1; $j++) {
+
+            if (strcasecmp(
+                $hasil[$j]["nama"]
+                $hasil[$j + 1]["nama"]
+            ) > 0) {
+
+                // Tuker dua barang bersebelahan
+                $temp = $hasil[$j];
+                $hasil[$j] = $hasil[$j + 1];
+                $hasil[$j + 1] = $temp;
+            }
+        }
+    }
+}
+
+// 4. Selection Sort
+elseif ($metode === "selection") {
+    $n = count($hasil);
+
+    for ($i = 0; $i < $n - 1; $i++) {
+        $min = $i;
+
+        // Cari nama terkecil di sisa data
+        for ($j = $i + 1; $j < $n; $j++) {
+            if (strcasecmp(
+                $hasil[$j]["nama"],
+                $hasil[$min]["nama"]
+            ) < 0) {
+                $min = $j;
+            }
+        }
+
+        // Tukar posisi saat ini
+        $temp = $hasil[$i];
+        $hasil[$i] = $hasil[$min];
+        $hasil[$min] = $temp;
+    }
+}
+?>
 
