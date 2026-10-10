@@ -4,12 +4,16 @@
 // 1. Data barang inventaris ATK
 $barang = [
     ["kode" => "PNS-01", "nama" => "Pensil 2B"],
-    ["kode" => "SPD-01", "nama" => "Spidol Whiteboard"],
-    ["kode" => "PHP-01", "nama" => "Penghapus Karet"],
+    ["kode" => "SPD-01", "nama" => "Spidol Hitam"],
+    ["kode" => "PNG-01", "nama" => "Penghapus"],
     ["kode" => "KRT-01", "nama" => "Kertas HVS A4"],
-    ["kode" => "BKU-01", "nama" => "Buku Tulis Folio"],
+    ["kode" => "KRT-02", "nama" => "Kertas Folio"],
     ["kode" => "STP-01", "nama" => "Stapler"],
-    ["kode" => "LKB-01", "nama" => "Lakban Bening"]
+    ["kode" => "SLT-01", "nama" => "Selotip"],
+    ["kode" => "STC-01", "nama" => "Sticky Notes"],
+    ["kode" => "GNT-01", "nama" => "Gunting"],
+    ["kode" => "MPK-01", "nama" => "Map Kertas"],
+
 ];
 
 // 2. Ambil pilihan algoritma dari form
